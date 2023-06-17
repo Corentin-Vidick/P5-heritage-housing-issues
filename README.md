@@ -34,7 +34,7 @@ Heritage Housing Issues is a data science and machine learning project with an e
 | YearRemodAdd  | Remodel date (same as construction date if no remodelling or additions) | 1950 - 2010                                                                                                                                                             |
 | SalePrice     | Sale Price                                                              | 34900 - 755000                                                                                                                                                          |
 
-- The second part of the dataset, inherited_houses, has 4 rows and 23 columns. Each row represents an inherited property and the columns correspond to the house profile. The variables are consistent in name and type with the variables from house_price_records. We will establish a ML process to determine the sales price for each property.
+- The second part of the dataset, inherited_houses, has 4 rows and 23 columns. Each row represents an inherited property and the columns correspond to the house profile. The variables are consistent in name and type with We will establish a ML process to determine the sales price for each property.
 
 ## Business Requirements
 
