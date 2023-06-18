@@ -88,12 +88,47 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-- Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+- This project is presented via a StreamLit dashboard web app. It will allow the user to easily navigate through the pages via the interactive menu on the lefthand-side of the page.
+
+### Main page - Quick Project Summary
+
+- The main page presents a summary of the project. This is a brief description of the project's key terms, dataset and business requirements.
+
+### Page two - Sales Price Study
+
+- This page will display the results of our study of the dataset through correlation and PPS.
+- It includes:
+    * Visualisation of the dataset
+    * Pearson correlation
+    * Spearman correlation
+    * Predictive Power Score
+
+### Page three - Project Hypothesis and Validation
+
+- Hypothesis one: the size of the house is positively correlated to the sale price.
+- Validation: 
+
+- Hypothesis two: the quality/condition of the property is positively correlated to the sale price.
+- Validation:
+
+- Hypothesis three: the age of a house is negatively correlated to the sale price.
+- Validation:
+
+### Page four - Inheritance sales price
+
+- This page presents the prediction made for the four inherited houses. It allows the user to see the houses' features, their individual predicted sales price as well as the total sales price expected.
+
+### Page five - House sales price
+
+- This page gives the user the opportunity to input different values for a house's features and predict it's sales price in real time.
+
+### Page six - Technical information
+
+- This is the technical page of the project. It presents the results of our model's perfromance and the pipeline steps.
 
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+- There are curently no known unfixed bugs.
 
 ## Deployment
 
