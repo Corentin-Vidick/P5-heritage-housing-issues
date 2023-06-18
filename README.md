@@ -47,15 +47,44 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+- We will be making hypothesises regarding the sale price of houses:
+  - The size of the house is positively correlated to the sale price. The bigger the house, the more expensive it is.
+  - The quality/condition of the property is positively correlated to the sale price. A pretty house is an expensive house
+  - The age of a house is negatively correlated to the sale price. The older the house/renovation, the cheaper it is.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+- Business requirement 1:
+
+  - As a customer I can access an interactive dashboard, so that I can view and understand the data presented.
+  - As a customer I can easily visualize correlation between variables, so that I can understand the impact of each feature on the sale price.
+  - As a customer I can view the most influential features, so that I can concentrate on the right set of features.
+
+- Business requirement 2:
+  - As a customer I can visualize the predicted sales price of my inherited properties, so that I can predict my income.
+  - As a customer I can enter a house's features and immediately predict it's sales price, so that I can predict if an investment is worth it.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+- This project will enable the customer to predict sales price for houses in Ames, Iowa. This will allow them to make the correct investment choices and maximise their return.
+
+- The customer has asked us to deliver the project through a dashboard. This dashboard will include different pages to meet the business requirements while maintaining an accessible yet comprehensive content.
+
+- In order for the customer to be satisfied and consider a successful project outcome we will have to deliver a dashboard that is accessible and gives sufficient and clear insight on the house pricing. We will also have to be able to predict a house's price, based on certain features, with a minimum of 75% accuracy according to the model.
+
+- The inputs for this model will be the houses' features. Proper study of the data will determine if all features are relevant, and with which level of correlation. The output will be a house price, in dollars. This price is the end target of our customer, who wants this prediction to be as precise as possible as they have inherited four houses, and might want to invest more. In order to meet the first goal, we will present the price of each inherited house as well as the total of all four houses. For the second goal, we will present the predicted sale price based on the selected features.
+
+- Business requirement 1 considers visualizing data and correlation between features. As such it can be solved using conventional data analysis. In this case we will be studying correlations through Pearson's and Spearman's correlation analysises. Running a PPS study will help us understand how useful a feature is in predicting the value of our target variable by normalizing the data. We will also be using heatmaps and plots to understand the effects of a feature on our target variable.
+
+- In this project business requirement 2 requires an artificial inteligence solution. We will train a ML model in order to achieve this.
+
+- Our target variable is a price in dollars. As this is a discrete variable it suggests we should use a regression model. This will be a supervised and uni-dimensional Machine Learning task.
+
+- The criteria for the performance goal of the predictions will be it's R2 score. The R2 score is the proportion of the variance in the dependant variable that is predictablefrom the independant variable. A high value will show a high level of correlation meaning our regression model is valid. The outcome will be considered as successful if the R2 score is of at least 0.75 on train and test sets.
+
+- There are no ethical or privacy concerns with the data used in this project as it is a public dataset. This dataset contains house prices for Ames, Iowa. There are no names, addresses or any other personal/geographical information in the database. We will consider the area (62.86 km2 with 66427 inhabitants) wide enough to not cause any privacy issues.
+
+- In order to tackle this complex project, we will divide it into epics and user stories. An epic is a body of work that can be broken down into specific tasks (called user stories) based on the needs/requests of customers or end-users. User stories are small, self-contained units of development work designed to accomplish a specific goal within our project. These will be used in conjunction with a Kanban board and MoSCoW prioritisation to ensure an efficient, focused and timely project delivery.
 
 ## Dashboard Design
 
