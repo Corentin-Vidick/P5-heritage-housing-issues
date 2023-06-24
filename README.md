@@ -98,15 +98,15 @@ Although your friend has an excellent understanding of property prices in her ow
 
 - This page will display the results of our study of the dataset through correlation and PPS.
 - It includes:
-    * Visualisation of the dataset
-    * Pearson correlation
-    * Spearman correlation
-    * Predictive Power Score
+  - Visualisation of the dataset
+  - Pearson correlation
+  - Spearman correlation
+  - Predictive Power Score
 
 ### Page three - Project Hypothesis and Validation
 
 - Hypothesis one: the size of the house is positively correlated to the sale price.
-- Validation: 
+- Validation:
 
 - Hypothesis two: the quality/condition of the property is positively correlated to the sale price.
 - Validation:
