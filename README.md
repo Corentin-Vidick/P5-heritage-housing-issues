@@ -49,7 +49,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 - We will be making hypothesises regarding the sale price of houses:
   - The size of the house is positively correlated to the sale price. The bigger the house, the more expensive it is.
-  - The quality/condition of the property is positively correlated to the sale price. A pretty house is an expensive house
+  - The quality/condition of the property is positively correlated to the sale price. A pretty house is an expensive house.
   - The age of a house is negatively correlated to the sale price. The older the house/renovation, the cheaper it is.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
