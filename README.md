@@ -106,13 +106,13 @@ Although your friend has an excellent understanding of property prices in her ow
 ### Page three - Project Hypothesis and Validation
 
 - Hypothesis one: the size of the house is positively correlated to the sale price.
-- Validation:
+- Validation: The correlation between features 1stFlrSF, GarageArea, GrLivArea, LotFrontage, TotalBsmtSF and SalePrice confirm this.
 
 - Hypothesis two: the quality/condition of the property is positively correlated to the sale price.
-- Validation:
+- Validation: The correlation between features BsmtFinType1, GarageFinish,KitchenQual or OverallQual confirm this.
 
 - Hypothesis three: the age of a house is negatively correlated to the sale price.
-- Validation:
+- Validation: The correlation between features GarageYrBlt, YearBuilt and YearRemodAdd confirm this.
 
 ### Page four - Inheritance sales price
 

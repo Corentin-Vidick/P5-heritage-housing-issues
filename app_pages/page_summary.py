@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def page_1():
+def page_summary():
     """
     Displays contents of the project summary page
     """
@@ -27,7 +27,7 @@ def page_1():
 
     # Link to README file, so the users can have access to full project documentation
     st.write(
-        f"* For additional information, please visit and **read** the "
+        f"* For additional information, please visit and read the "
         f"[Project README file](https://github.com/Corentin-Vidick/P5-heritage-housing-issues/blob/main/README.md).")
 
     # copied from README file - "Business Requirements" section
