@@ -90,11 +90,11 @@ Although your friend has an excellent understanding of property prices in her ow
 
 - This project is presented via a StreamLit dashboard web app. It will allow the user to easily navigate through the pages via the interactive menu on the lefthand-side of the page.
 
-### Main page - Quick Project Summary
+### Main page - Project summary
 
 - The main page presents a summary of the project. This is a brief description of the project's key terms, dataset and business requirements.
 
-### Page two - Sales Price Study
+### Page two - Sales price study
 
 - This page will display the results of our study of the dataset through correlation and PPS.
 - It includes:
@@ -103,7 +103,7 @@ Although your friend has an excellent understanding of property prices in her ow
   - Spearman correlation
   - Predictive Power Score
 
-### Page three - Project Hypothesis and Validation
+### Page three - Project hypothesises
 
 - Hypothesis one: the size of the house is positively correlated to the sale price.
 - Validation: The correlation between features 1stFlrSF, GarageArea, GrLivArea, LotFrontage, TotalBsmtSF and SalePrice confirm this.

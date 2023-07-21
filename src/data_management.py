@@ -12,8 +12,7 @@ def load_housing_data():
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def load_heritage_data():
-    df_h = pd.read_csv(
-        "inputs/datasets/raw/house_prices_records.csv")
+    df_h = pd.read_csv("inputs/datasets/raw/inherited_houses.csv")
     return df_h
 
 
