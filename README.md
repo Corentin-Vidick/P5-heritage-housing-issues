@@ -135,7 +135,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ### Heroku
 
-- The App live link is: https://YOUR_APP_NAME.herokuapp.com/
+- The App live link is:
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 
