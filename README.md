@@ -92,16 +92,17 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ### Main page - Project summary
 
-- The main page presents a summary of the project. This is a brief description of the project's key terms, dataset and business requirements.
+- The main page presents a summary of the project. This is a brief description of the project's key terms, an overview of the dataset source and contents and an insight into our business requirements.
 
 ### Page two - Sales price study
 
 - This page will display the results of our study of the dataset through correlation and PPS.
 - It includes:
-  - Visualisation of the dataset
-  - Pearson correlation
-  - Spearman correlation
-  - Predictive Power Score
+  - A sample view of our dataset
+  - A graphical representation of our target variable
+  - Graphical representations of the distribution of our target variable per feature
+  - Heatmaps displaying correltion levels (Pearson and Spearman)
+  - A heatmap showing the Predictive Power Score
 
 ### Page three - Project hypothesises
 
@@ -116,9 +117,9 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ### Page four - Inheritance sales price
 
-- This page presents the prediction made for the four inherited houses. It allows the user to see the houses' features, their individual predicted sales price as well as the total sales price expected.
+- This page presents the prediction made for the four inherited houses. It allows the user to see the houses' most influencial features, as determined in our Modeling and Evaluation notebook. It also displays the individual predicted sales price as well as the total sales price expected.
 
-### Page five - House sales price
+### Page five - Sales price predictor
 
 - This page gives the user the opportunity to input different values for a house's features and predict it's sales price in real time.
 
