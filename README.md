@@ -2,6 +2,28 @@
 
 Heritage Housing Issues is a data science and machine learning project with an end goal of estimating the sale price of inherited properties. We will use a Streamlit dashboard to meet the client's expectations. We will achieve this by enabling them to visualize which features of the dataset are most closely correlated to the property price. They will also be able to estimate the sale price of the inherited property, individually and as a whole. Finally the client (and/or future customers) to manually select a house's features and estimate it's sale price.
 
+[Live Site](https://p5hhi-aa97e2b3a3da.herokuapp.com/)
+
+## Table of Contents
+
+0. [Heritage Housing Issues](#about)
+1. [Dataset Content](#udataset-content)
+2. [Business Requirements](#business-requirements)
+3. [Hypothesis and how to validate](#hypothesis-and-validation)
+4. [The rationale to map the business requirements to the Data Visualisations and ML tasks](#rationale)
+5. [ML Business Case](#ml-business-case)
+6. [Dashboard Design](#dashboard-design)
+   1. [Main page - Project summary](#project-summary)
+   2. [Page two - Sales price study](#sales-price-study)
+   3. [Page three - Project hypothesises](#project-hypothesises)
+   4. [Page four - Inheritance sales price](#inheritance-sales-price)
+   5. [Page five - Sales price predictor](#sales-price-predictor)
+   6. [Page six - Technical information](#technical-information)
+7. [Unfixed Bugs](#testing)
+8. [Deployment](#deployment) 3. [Heroku Deployment](#heroku-deployment) 4. [Local Deployment](#local-deployment) 5. [Cloning](#cloning) 6. [Forking](#forking)
+9. [Main Data Analysis and Machine Learning Libraries](#libraries)
+10. [Credits](#credits) 3. [Acknowledgements](#acknowledgements)
+
 ## Dataset Content
 
 - This project uses a dataset sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data).
@@ -94,6 +116,12 @@ Although your friend has an excellent understanding of property prices in her ow
 
 - The main page presents a summary of the project. This is a brief description of the project's key terms, an overview of the dataset source and contents and an insight into our business requirements.
 
+<details><summary>Project summary</summary>
+
+![screenshot](documentation/screenshots/project_summary.jpg)
+
+</details>
+
 ### Page two - Sales price study
 
 - This page will display the results of our study of the dataset through correlation and PPS.
@@ -103,6 +131,13 @@ Although your friend has an excellent understanding of property prices in her ow
   - Graphical representations of the distribution of our target variable per feature
   - Heatmaps displaying correltion levels (Pearson and Spearman)
   - A heatmap showing the Predictive Power Score
+
+<details><summary>Sales price study</summary>
+
+![screenshot](documentation/screenshots/sales_price_study_1.jpg)
+![screenshot](documentation/screenshots/sales_price_study_2.jpg)
+
+</details>
 
 ### Page three - Project hypothesises
 
@@ -115,57 +150,200 @@ Although your friend has an excellent understanding of property prices in her ow
 - Hypothesis three: the age of a house is negatively correlated to the sale price.
 - Validation: The correlation between features GarageYrBlt, YearBuilt and YearRemodAdd confirm this.
 
+<details><summary>Project hypothesises</summary>
+
+![screenshot](documentation/screenshots/project_hypothesises.jpg)
+
+</details>
+
 ### Page four - Inheritance sales price
 
 - This page presents the prediction made for the four inherited houses. It allows the user to see the houses' most influencial features, as determined in our Modeling and Evaluation notebook. It also displays the individual predicted sales price as well as the total sales price expected.
+
+<details><summary>Inheritance sales price</summary>
+
+![screenshot](documentation/screenshots/inheritance_sales_price.jpg)
+
+</details>
 
 ### Page five - Sales price predictor
 
 - This page gives the user the opportunity to input different values for a house's features and predict it's sales price in real time.
 
+<details><summary>Sales price predictor</summary>
+
+![screenshot](documentation/screenshots/sales_price_predictor.jpg)
+
+</details>
+
 ### Page six - Technical information
 
 - This is the technical page of the project. It presents the results of our model's perfromance and the pipeline steps.
 
+<details><summary>Technical information</summary>
+
+![screenshot](documentation/screenshots/technical_information.jpg)
+![screenshot](documentation/screenshots/technical_info_v1_a.jpg)
+![screenshot](documentation/screenshots/technical_info_v1_b.jpg)
+
+</details>
+
 ## Unfixed Bugs
 
-- There are curently no known unfixed bugs.
+- In the Jupyter Notebook 05 - Modeling and Evaluation, the hyperparameter optimization search and the extensive gridSearch CV cause some FutureWarnings that I have not been able to override.
+
+<details><summary>FutureWarning</summary>
+
+![screenshot](documentation/screenshots/modeling_errors.jpg)
+
+</details>
 
 ## Deployment
 
-### Heroku
+### Heroku Deployment
 
-- The App live link is:
-- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-- The project was deployed to Heroku using the following steps.
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+<details><summary>New App</summary>
+
+![screenshot](documentation/screenshots/heroku_deployment_1.jpg)
+
+</details>
+
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+<details><summary>Name choice</summary>
+
+![screenshot](documentation/screenshots/heroku_deployment_2.jpg)
+
+</details>
+<details><summary>Deployment</summary>
+
+![screenshot](documentation/screenshots/heroku_deployment_3.jpg)
+
+</details>
+
+Heroku needs five additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+- kaggle.json
+- runtime.txt
+- setup.sh
+
+You can install this project's **requirements** (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- _replace **app_name** with the name of your primary Django app name; the folder where settings.py is located_
+
+Runtime.txt is used to specify the python version we will be working with, in this case 3.8.17.
+
+Setup.sh is used for streamlit app.
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace _app_name_ with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+  - `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the _requirements.txt_ file.
+
+- `pip3 install -r requirements.txt`.
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+
+- Start the Django app: `streamlit run app.py`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
+- Everything should be ready now, so run the Django app again: `streamlit run app.py`
+
+### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/Corentin-Vidick/P4-JSDogTraining)
+2. Locate the Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+   - `git clone https://github.com/Corentin-Vidick/P4-JSDogTraining.git`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Corentin-Vidick/P4-JSDogTraining)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Corentin-Vidick/P4-JSDogTraining)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+### Data Cleaning
 
-## Credits
+- MeanMedianImputer
+- DropFeatures
+- CategoricalImputer
 
-- In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+### Feature Engineering
 
-### Content
+- OrdinalEncoder
+- SmartCorrelatedSelection
+- Winsorizer
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+### Feature Scaling
 
-### Media
+- StandardScaler
 
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
+### Feature Selection
 
-## Acknowledgements (optional)
+- SelectFromModel
 
-- In case you would like to thank the people that provided support through this project.
+### ML algorithms
+
+- DecisionTreeRegressor
+- XGBRegressor
+- GradientBoostingRegressor, RandomForestRegressor
+- LinearRegression
+- AdaBoostRegressor
+- ExtraTreesRegressor
+
+## Acknowledgements
+
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome. In particular Niel McEwen for his support and technical knowledge.
+- I would like to thank my partner (Anabella), for believing in me, and allowing me to make this transition into software development
