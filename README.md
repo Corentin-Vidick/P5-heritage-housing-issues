@@ -4,25 +4,32 @@ Heritage Housing Issues is a data science and machine learning project with an e
 
 [Live Site](https://p5hhi-aa97e2b3a3da.herokuapp.com/)
 
+![screenshot](documentation/screenshots/project_summary.jpg)
+
 ## Table of Contents
 
 0. [Heritage Housing Issues](#about)
-1. [Dataset Content](#udataset-content)
+1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
-3. [Hypothesis and how to validate](#hypothesis-and-validation)
-4. [The rationale to map the business requirements to the Data Visualisations and ML tasks](#rationale)
+3. [Hypothesis and how to validate](#hypothesis-and-how-to-validate)
+4. [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
 5. [ML Business Case](#ml-business-case)
 6. [Dashboard Design](#dashboard-design)
-   1. [Main page - Project summary](#project-summary)
-   2. [Page two - Sales price study](#sales-price-study)
-   3. [Page three - Project hypothesises](#project-hypothesises)
-   4. [Page four - Inheritance sales price](#inheritance-sales-price)
-   5. [Page five - Sales price predictor](#sales-price-predictor)
-   6. [Page six - Technical information](#technical-information)
-7. [Unfixed Bugs](#testing)
-8. [Deployment](#deployment) 3. [Heroku Deployment](#heroku-deployment) 4. [Local Deployment](#local-deployment) 5. [Cloning](#cloning) 6. [Forking](#forking)
-9. [Main Data Analysis and Machine Learning Libraries](#libraries)
-10. [Credits](#credits) 3. [Acknowledgements](#acknowledgements)
+   1. [Main page - Project summary](#main-page---project-summary)
+   2. [Page two - Sales price study](#page-two---sales-price-study)
+   3. [Page three - Project hypothesises](#page-three---project-hypothesises)
+   4. [Page four - Inheritance sales price](#page-four---inheritance-sales-price)
+   5. [Page five - Sales price predictor](#page-five---sales-price-predictor)
+   6. [Page six - Technical information](#page-six---technical-information)
+7. [Unfixed Bugs](#unfixed-bugs)
+8. [Deployment](#deployment)
+   1. [Heroku Deployment](#heroku-deployment)
+   2. [Local Deployment](#local-deployment)
+   3. [Cloning](#cloning)
+   4. [Forking](#forking)
+9. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -107,6 +114,12 @@ Although your friend has an excellent understanding of property prices in her ow
 - There are no ethical or privacy concerns with the data used in this project as it is a public dataset. This dataset contains house prices for Ames, Iowa. There are no names, addresses or any other personal/geographical information in the database. We will consider the area (62.86 km2 with 66427 inhabitants) wide enough to not cause any privacy issues.
 
 - In order to tackle this complex project, we will divide it into epics and user stories. An epic is a body of work that can be broken down into specific tasks (called user stories) based on the needs/requests of customers or end-users. User stories are small, self-contained units of development work designed to accomplish a specific goal within our project. These will be used in conjunction with a Kanban board and MoSCoW prioritisation to ensure an efficient, focused and timely project delivery.
+
+<details><summary>Kanban board</summary>
+
+![screenshot](documentation/screenshots/kanban.jpg)
+
+</details>
 
 ## Dashboard Design
 
@@ -343,7 +356,19 @@ You can fork this repository by using the following steps:
 - AdaBoostRegressor
 - ExtraTreesRegressor
 
+## Credits
+
+### Content
+
+| Source                                                                                                                                                                        | Location          | Notes                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------- |
+| [CodeInstitute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DDA101+2021_T4/courseware/bba260bd5cc14e998b0d7e9b305d50ec/c83c55ea9f6c4e11969591e1b99c6c35/) | jupyter notebooks | project developement            |
+| [Amareteklay](https://github.com/Amareteklay/heritage-housing-issues)                                                                                                         | jupyter notebooks | notebooks basic functionalities |
+| [Code-Institute_solutions](https://github.com/Code-Institute-Solutions/churnometer)                                                                                           | app pages         | app pages general build         |
+| [Corentin-Vidick](https://github.com/Corentin-Vidick/P4-JSDogTraining)                                                                                                        | readme            | readme markup                   |
+
 ## Acknowledgements
 
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome. In particular Niel McEwen for his support and technical knowledge.
+- I would also like to thank Tim Nelson, my previous mentor, for motivating me and for his help with readme files.
 - I would like to thank my partner (Anabella), for believing in me, and allowing me to make this transition into software development
